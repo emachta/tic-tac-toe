@@ -53,15 +53,19 @@ function App() {
   return (
     <div className="container">
       {winner && (
-        <div className="winnerWidget">
-          <p>Winner: {winner}</p>
-          <button onClick={resetBoard}>Play Again</button>
+        <div className="winnerWidgetContainer">
+          <div className="winnerWidgetBackground">
+            <p>Winner: {winner}</p>
+            <button onClick={resetBoard}>Play Again</button>
+          </div>
         </div>
       )}
       {!winner && playCount === 9 && (
-        <div className="winnerWidget">
-          <p>It's a draw.</p>
-          <button onClick={resetBoard}>Play Again</button>
+        <div className="winnerWidgetContainer">
+          <div className="winnerWidgetBackground">
+            <p>It's a draw.</p>
+            <button onClick={resetBoard}>Play Again</button>
+          </div>
         </div>
       )}
       <div className="navBar">
