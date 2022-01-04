@@ -50,6 +50,13 @@ function App() {
     setPlayCount((playCount) => playCount + 1);
   };
 
+  const findSectionsoApplyBorderStyles = (leftIndex, rightIndex) => {
+    switch (`${leftIndex}:${rightIndex}`) {
+      default:
+        return {};
+    }
+  };
+
   return (
     <div className="container">
       {winner && (
@@ -82,6 +89,7 @@ function App() {
                 onClick={() => modifyBoard(parentIndex, subIndex, board, turn)}
                 key={`${parentIndex}:${subIndex}`}
                 className="subsection"
+                style={findSectionsoApplyBorderStyles(parentIndex, subIndex)}
               >
                 {subSection}
               </div>

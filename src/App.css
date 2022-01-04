@@ -7,10 +7,15 @@
 }
 .board {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 2fr);
+  grid-template-rows: repeat(3, 2fr);
   flex: 10;
   margin: 20px;
+  background-color: #ee7946;
+  grid-gap: 10px;
+  aspect-ratio: 1/1;
+  max-width: 700px;
+  margin-bottom: 100px;
 }
 
 .navBar {
@@ -28,14 +33,12 @@
   font-size: 20px;
 }
 .container .subsection {
-  width: 100%;
-  height: 100%;
-  border: 1px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 5rem;
   font-weight: 500;
+  background-color: white;
 }
 
 .container .winnerWidgetContainer {
